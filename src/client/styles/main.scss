@@ -1,0 +1,149 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+$minRedColor: #ed1d24;
+$minWihteColor:#FFF;
+html{
+    scroll-behavior: smooth;
+}
+
+/* Start Nav Bar */
+nav{
+    background: wheat;
+    
+    .navbar-brand{
+        span{
+            font-size: 40px;
+        }
+        span:first-child{
+            color: white;
+            font-weight: bold;
+            }
+            span:last-child{
+                color: $minRedColor;
+                }
+    }
+    .navbar-nav .nav-link{
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-left: 20px;
+        font-weight: bold;
+    }
+    .navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+
+    
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+        
+/* End Nav Bar */
+
+/*Start the first section */
+
+.first{
+    padding: 100px 0;
+
+    h1{
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: $minWihteColor;
+    }  
+
+    button{
+        background-color: $minRedColor;
+        color: $minWihteColor;
+        padding: 10px 30px;
+        font-size: 20px;
+        border: 1px solid $minRedColor;
+        text-transform: uppercase;    
+        }
+ }
+    
+    
+        .flight{
+            height: 100%;
+            background-image: url("../img/f6.jpg");
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;   
+        }
+        
+/*End the fist section */
+
+
+/* Start Overview */
+  
+    .overview {
+        
+        h2{
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+    
+        p{
+            line-height: 2;
+            font-size: 20px;
+            width: 80%;
+            margin: 0 auto 15px;
+            color: #6a6a6a;
+        }
+        h4{
+            letter-spacing: 2;
+            font-weight: bold;
+            color: #acacac;
+            margin-bottom: 40px;
+        }
+        button{
+        background-color: $minRedColor;
+        color: $minWihteColor;
+        padding: 10px 30px;
+        font-size: 20px;
+        border: 1px solid $minRedColor;
+        text-transform: uppercase;    
+        }
+    
+    }
+    
+    /* End Overview */
+
+/* Start Add Trip */
+.Tripsection{
+    padding: 50px 0;
+  background-color:rgb(238, 238, 238);
+
+  p {
+    color: black;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    }
+
+    input{
+        border: rgb(238, 238, 238);
+        background-color: rgb(238, 238, 238);
+    }
+    
+    #bt{
+        background-color: $minRedColor;
+        color: #FFF;
+        padding: 10px 30px;
+        font-size: 20px;
+        border: 1px solid $minRedColor;
+        text-transform: uppercase;    
+        
+    }
+    
+    .leftside, .rightside{
+        height: 50vh;
+        width: 100%;
+    }
+
+}
+/* End Add Trip */

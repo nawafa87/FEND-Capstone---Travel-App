@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/cd4e737563.js" type = "text/javascript" crossorigin="anonymous"></script>    
+  </head>
+</head>
+<body>
+     <!-- Start Nav Bar -->
+     <div id="home" class="flight img-fluid text-center"> 
+ <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <span>Travel</span><span>Planner</span>    
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+            
+              <li class="nav-item ">
+                <a class="nav-link" href="#overview">overview <span class="sr-only">(current)</span></a>
+              </li>
+              
+              <li class="nav-item">
+              <a class="nav-link" href="#addTrip">add Trip</a>
+            </li>
+          </ul>
+            
+        </div>
+      </nav>
+      <!-- End Nav Bar -->
+
+      <!--Start First Section-->
+      <section class="first">
+        <div class="container">
+        <h1>Welocme to our WebSite!</h1>
+              <button href="#myTrip">Lets Start !</button>
+        
+            </div>
+      </section>
+      
+      </div>
+     <!--End First Section-->
+
+          <!-- Start Overview -->
+          <div id="overview" class="overview text-center">
+            <div class="container">
+                <h2>overview</h2>
+                <h3>Travel App</h3>
+                <i class="fa fa-plane" aria-hidden="true"></i>
+                <p>Welcome to Our Travel App , in this app you can put your city you want to go we will display the weather in this city and picture of the picture and the lan and lng to you.
+                </p>
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ea excepturi soluta dolorum illo incidunt quo ut ducimus rem quos nesciunt hic cupiditate dolor, earum rerum porro alias nisi? Accusantium?</P>
+
+              
+              </div>
+            </div>
+           
+            </div>
+        </div>
+             
+<!--End Overview-->
+
+<!-- Start Add Trip -->
+<div id="addTrip" class="Tripsection text-center">
+    <div class="container">
+        <h2>Add Trip</h2>
+        
+      <div class="container">
+        <div class="col">
+          <label><b>My Trip to:</b>
+            <input id="city" type="text" placeholder="Enter Location">
+          </label><br>
+          <label>
+            <b>Departing:</b>
+            <input id="departing" type="date">
+          </label><br>
+          <label><b>Arriving:</b>
+            <input id="arriving" type="date"><br>
+            <button id="bt">here</button>
+          </label><br>
+
+          
+        </div>
+      </div>
+      <div id="myTrip" class="overview text-center">
+        <div class="container">
+          <div class="row no-gutters">
+           
+           <div class="col-md-6 no-gutters">
+          
+               <div class="leftside">
+                 <img id="photo"/>
+                </div>
+              
+              
+        </div>
+            <div class="col-md-6 no-gutters">
+              <div class="rightside">
+      <p id="trip_to"></p>
+      <p id="departing_to"></p>
+      <p id="ways"></p>
+      <p id="temp"></p>
+      <p id="high"></p>
+      <p id="low"></p>
+      <p id="cloud"></p>
+              </div>
+             
+              </div>
+          
+
+        </div>
+      </div>
+    </div>
+   
+    </div>
+</div>
+<!-- End Add Trip -->
+
+     <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+      </script>    
+</body>
+</html>
