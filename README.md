@@ -1,6 +1,6 @@
 # Capstone - Travel APP 
 # Description
-Hello Everyone, in this project well be able to   put your city you want to go we will display the weather in this city and picture of the picture and the lan and lng to you, I use in this App 3 API and you can Try It Now!   
+Hello Everyone, in this project well be able to   put your city you want to go we will display the weather in this city and picture of the picture and the lan and lng to you, I use in this App 3 API and I use bootstrap for the style an d jQuery you can Try It Now!   
 # Prerequisite
 - express
 - json
@@ -23,12 +23,13 @@ you can use the `Visual Studio Code` and install all the Prerequisite form the *
 `npm i -D mini-css-extract-plugin`
 `npm i -D optimize-css-assets-webpack-plugin terser-webpack-plugin`
 `npm install workbox-webpack-plugin --save-dev`
-
+`npm install bootstrap`
+`npm install jquery`
 ## Get Up and Running
 
 Fork this repo, then clone your forked repo down to your computer:
 ```
-git clone -- git@github.com:nawafa87/FEND-project5.git --
+git clone -- git@github.com:nawafa87/FEND-Capstone---Travel-App.git --
 ```
 `cd` into your new folder and run:
 - ```npm install```
