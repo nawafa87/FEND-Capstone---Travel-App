@@ -16,6 +16,7 @@ export function performAction(e)
     else{
         departing = new Date(departing);
         arriving = new Date(arriving);
+        //this the first fetch from geonames api to get the city data from the api
         api_url = `http://api.geonames.org/searchJSON?q=${city}&username=nawafa87`;  
         getData(api_url)
         .then(function(data){
@@ -25,7 +26,7 @@ export function performAction(e)
     
     }
 }
-    
+//this the first fetch from geonames api to get the city data from the api    
 const getData = async(url = '')=>{
     const res = await fetch(api_url)
     try{
@@ -43,10 +44,12 @@ const getData = async(url = '')=>{
          let today = new Date(); 
         if(departing.getDate() <= today.getDate()+6){
             console.log("OK");
+            //this the secoend fetch from wetherbit api for the current weather to get the city data from the api by lat and lng
             getData2(`https://api.weatherbit.io/v2.0/current?lat=${data.geonames[0].lat}&lon=${data.geonames[0].lng}&key=036c576df3a147d393103065d3c0df56`)
         }
         else{
             console.log("NOOOO");
+            //this the secoend fetch from wetherbit api for the forecast weather to get the city data from the api by lat and lng
             getData2(`https://api.weatherbit.io/v2.0/forecast/daily?lat=${data.geonames[0].lat}&lon=${data.geonames[0].lng}&key=036c576df3a147d393103065d3c0df56`)
         }
          return data;
@@ -56,6 +59,7 @@ const getData = async(url = '')=>{
     }
     
 }
+//this the secoend fetch from wetherbit api for the current weather or forecast to get the city data from the api by lat and lng
   const getData2 = async(url = '')=>{
     const response = await fetch(url);
     try{    
@@ -73,6 +77,7 @@ const getData = async(url = '')=>{
             document.getElementById('temp').innerHTML =`Typical weather for then is:
              ${newData.data[0].temp}`;
              document.getElementById('cloud').innerHTML =`Mostly ${newData.data[0].weather.description} through the day`;
+             //this the api to get the picture for the city to get the picture for the city
             getData3(`https://pixabay.com/api/?key=17623255-470774e4928590abd3c568b46&q=${newData.data[0].city_name}`)
         
         }
@@ -82,7 +87,7 @@ const getData = async(url = '')=>{
             document.getElementById('temp').innerHTML =`Typical weather for then is:
             High ${newData.data[0].high_temp}, Low ${newData.data[0].low_temp}, Temp ${newData.data[0].temp}`;
              document.getElementById('cloud').innerHTML =`Mostly ${newData.data[0].weather.description} through the day`;
-            
+            //this the api to get the picture for the city to get the picture for the city
             getData3(`https://pixabay.com/api/?key=17623255-470774e4928590abd3c568b46&q=${newData.city_name}`)
         }
         return newData;
@@ -92,7 +97,7 @@ const getData = async(url = '')=>{
         console.log("error",error);
     }
 }
-
+//this the api to get the picture for the city to get the picture for the city
 const getData3 = async(url = '')=>{
     const response = await fetch(url);
     try{    
